@@ -17,13 +17,12 @@ form.addEventListener("submit", (e) => {
   // console.log(document.querySelector('input[name="q1"]:checked').value);
 
   for (let i = 1; i < 6; i++) {
-    tableauResultats.push(
-      document.querySelector(`input[name="q${i}"]:checked`).value
-    );
+    tableauResultats.push(document.querySelector(`input[name="q${i}"]:checked`).value);
   }
   verifFunc(tableauResultats);
   tableauResultats = [];
 });
+
 
 function verifFunc(tabResultats) {
   for (a = 0; a < 5; a++) {
@@ -33,6 +32,7 @@ function verifFunc(tabResultats) {
       verifTableau.push(false);
     }
   }
+
   // console.log(verifTableau);
   afficherResultats(verifTableau);
   couleursFonction(verifTableau);
@@ -93,13 +93,8 @@ function couleursFonction(tabValBool){
     }else{
       toutesLesQuestions[j].style.background = '#ffb8b8';
       toutesLesQuestions[j].classList.add('echec');
-
-
-      setTimeout(()=>{
-        toutesLesQuestions[j].classList.remove('echec');
-      },500);
-    }
-    
+      setTimeout(()=>{ toutesLesQuestions[j].classList.remove('echec');},500);
+    } 
   }
 }
 
