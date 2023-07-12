@@ -65,10 +65,8 @@ function validationResultats() {
   // si il n'y pas de chaîne de caractères vides dans partie en cours
   let matchNul = !partieEnCours.includes("");
   if (matchNul) {
-    main.style.minHeight = "560px";
     info.innerText = `🏳️ Match nul 🏳️`;
-    info.style.color = "silver";
-    btnRejouer.style.display = "block";
+    verrouillage = false;
     return; // sort complètement de la fonction
   }
    
